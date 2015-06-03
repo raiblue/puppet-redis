@@ -68,6 +68,14 @@ class redis::params {
   $slave_read_only        = true
   $slave_serve_stale_data = true
   $slaveof                = undef
+  $aof_load_truncated     = true
+  $aof_rewrite_incremental_fsync = true
+  $hz                     = 10
+  $repl_disable_tcp_nodelay = false
+  $saving_disabled        = false
+  $slave_priority         = 100
+  $tcp_backlog            = false
+  $tcp_keepalive          = 0
 
   case $::osfamily {
     'Debian': {
